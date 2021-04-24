@@ -245,6 +245,9 @@ public class CSBaseDataTransaction: NSObject {
     // MARK: Internal
     
     internal let swiftTransaction: BaseDataTransaction
+    @objc public var context: NSManagedObjectContext {
+        swiftTransaction.context
+    }
     
     internal init(_ swiftValue: BaseDataTransaction) {
         
